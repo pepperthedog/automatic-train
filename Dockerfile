@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y software-properties-common python-softw
 ENV USERNAME=NOTSET
 ENV PASSWORD=x
 ENV URL="pool.supportxmr.com:5555"
-ENV ALGORITHM=cryptonight
+ENV CURRENCY=monero
 ENV PRIORITY=19
 
 ADD run.sh /usr/local/bin/run.sh
