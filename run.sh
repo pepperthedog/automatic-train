@@ -31,8 +31,5 @@ else
   echo "THREADS is set to $THREADS"
 fi
 
-echo '* soft memlock 262144' >> /etc/security/limits.conf
-echo '* hard memlock 262144' >> /etc/security/limits.conf
-
 #sysctl -w vm.nr_hugepages=8 NOT possible in docker or with privileged container
 nice -n $PRIORITY ./xmrig -a $ALGORITHM -o $URL -u $USERNAME -p $PASSWORD -t $THREADS -k
